@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Academic homepage of Jamshid Derakhshan — mathematical logic, model theory, number theory and arithmetic geometry.">
+  <title>Jamshid Derakhshan | Mathematics</title>
+  <style>
+    :root{
+      --ink:#172033;
+      --muted:#5f6b7a;
+      --blue:#1f5fbf;
+      --blue-dark:#164b98;
+      --paper:#ffffff;
+      --soft:#f5f7fb;
+      --line:#dfe5ee;
+      --accent:#eef4ff;
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      color:var(--ink);
+      background:var(--paper);
+      line-height:1.65;
+    }
+    a{color:var(--blue);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{width:min(var(--max),calc(100% - 34px));margin:0 auto}
+    .site-header{
+      position:sticky;top:0;z-index:10;
+      background:rgba(255,255,255,.96);
+      border-bottom:1px solid var(--line);
+      backdrop-filter:blur(10px)
+    }
+    .nav-wrap{display:flex;align-items:center;justify-content:space-between;min-height:68px;gap:20px}
+    .brand{
+      width:42px;height:42px;border-radius:50%;
+      display:grid;place-items:center;
+      background:var(--ink);color:#fff;font-weight:700;
+      letter-spacing:.03em;text-decoration:none
+    }
+    .nav{display:flex;gap:20px;flex-wrap:wrap;justify-content:flex-end}
+    .nav a{color:var(--ink);font-weight:600;font-size:.95rem}
+    .hero{
+      padding:78px 0 64px;
+      background:linear-gradient(180deg,#f8fbff 0%,#fff 100%);
+      border-bottom:1px solid var(--line)
+    }
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,.7fr);gap:46px;align-items:start}
+    .eyebrow,.section-kicker,.programme-label,.tag{
+      text-transform:uppercase;letter-spacing:.12em;font-size:.77rem;font-weight:800;color:var(--blue)
+    }
+    h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.7rem,7vw,5.1rem);line-height:.98;margin:.18em 0 .2em}
+    h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2rem,4vw,3.1rem);line-height:1.12;margin:.15em 0 .65em}
+    h3{font-family:Georgia,"Times New Roman",serif;font-size:1.45rem;line-height:1.25}
+    h4{font-size:1.05rem;margin:.1em 0 .25em}
+    .role{font-size:1.28rem;font-weight:700;margin:.3em 0}
+    .affiliations{font-size:1.05rem;color:var(--muted);margin:.3em 0 1.2em}
+    .intro{font-size:1.13rem;max-width:760px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0 16px}
+    .button{
+      display:inline-block;border:1px solid var(--blue);padding:10px 16px;border-radius:8px;font-weight:700
+    }
+    .button.primary{background:var(--blue);color:white}
+    .button.primary:hover{background:var(--blue-dark);text-decoration:none}
+    .contact-row{display:flex;flex-wrap:wrap;gap:12px 18px;margin-top:18px;font-size:.95rem}
+    .hero-card{
+      border:1px solid var(--line);border-radius:18px;padding:28px;background:#fff;
+      box-shadow:0 12px 35px rgba(20,45,90,.08)
+    }
+    .monogram{
+      width:92px;height:92px;border-radius:50%;background:var(--accent);color:var(--blue);
+      display:grid;place-items:center;font-family:Georgia,"Times New Roman",serif;font-size:2.2rem;font-weight:700;margin-bottom:22px
+    }
+    .section{padding:72px 0}
+    .alt{background:var(--soft)}
+    .section-heading,.two-col,.research-intro-grid{
+      display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:start
+    }
+    .section-note,.prose,.research-lead{color:var(--muted)}
+    .research-programmes{display:grid;gap:18px;margin-top:34px}
+    .research-programme{
+      display:grid;grid-template-columns:62px 1fr;gap:22px;
+      border:1px solid var(--line);border-radius:14px;padding:28px;background:#fff
+    }
+    .programme-number{font-size:1.3rem;font-weight:800;color:#a2afc0}
+    .research-programme h3{margin:.15em 0 .45em}
+    .related-work{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:14px;font-size:.93rem}
+    .related-work span{font-weight:800;color:var(--ink)}
+    .research-index{margin-top:30px;padding-top:22px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:10px 16px}
+    .research-index span{font-weight:800}
+    .pub-list{padding-left:1.8rem}
+    .pub-list li{margin:0 0 22px}
+    .pub-list article{padding-left:6px}
+    .authors{font-weight:600;margin:.2em 0}
+    .links{font-size:.93rem}
+    details.more-work{margin-top:34px;border:1px solid var(--line);border-radius:12px;padding:16px 20px;background:#fff}
+    details summary{font-weight:800;cursor:pointer}
+    .card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .card{border:1px solid var(--line);border-radius:14px;padding:24px;background:#fff}
+    .timeline{display:grid;gap:0}
+    .timeline article{display:grid;grid-template-columns:88px 1fr;gap:22px;padding:20px 0;border-bottom:1px solid var(--line)}
+    .timeline time{font-weight:800;color:var(--blue)}
+    .contact-box{display:grid;grid-template-columns:1fr 1fr;gap:40px;border-top:1px solid var(--line);padding-top:40px}
+    footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:.92rem}
+    .footer-wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media (max-width:800px){
+      .site-header{position:static}
+      .nav-wrap{display:block;padding:14px 0}
+      .brand{margin-bottom:12px}
+      .nav{justify-content:flex-start;gap:10px 16px}
+      .hero{padding:50px 0}
+      .hero-grid,.section-heading,.two-col,.research-intro-grid,.contact-box{grid-template-columns:1fr}
+      .hero-grid{gap:26px}
+      .card-grid{grid-template-columns:1fr}
+      .research-programme{grid-template-columns:42px 1fr;padding:22px}
+      .timeline article{grid-template-columns:62px 1fr}
+    }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap nav-wrap">
+    <a class="brand" href="#top" aria-label="Home">JD</a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#books">Books</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#talks">Talks</a>
+      <a href="JDerakhshanCV(1).pdf">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Mathematical Logic · Model Theory · Number Theory</p>
+      <h1>Jamshid Derakhshan</h1>
+      <p class="role">Lecturer in Pure Mathematics, University of Oxford</p>
+      <p class="affiliations">St Hilda’s College · St Peter’s College</p>
+      <p class="intro">My research is in mathematical logic and model theory, with connections to number theory, algebraic geometry, group theory and analysis. Current work focuses on adeles and restricted products, valued fields, p-adic and motivic integration, zeta and L-functions, imaginaries, and interactions with the Langlands programme.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#publications">View publications</a>
+        <a class="button" href="JDerakhshanCV(1).pdf">Download CV</a>
+      </div>
+      <div class="contact-row">
+        <a href="mailto:derakhsh@maths.ox.ac.uk">derakhsh@maths.ox.ac.uk</a>
+        <a href="https://www.maths.ox.ac.uk/people/jamshid.derakhshan" target="_blank" rel="noopener">Oxford Mathematics</a>
+        <a href="https://www.st-hildas.ox.ac.uk/people/jamshid-derakhshan" target="_blank" rel="noopener">St Hilda’s</a>
+        <a href="https://www.spc.ox.ac.uk/people/jamshid-derakhshan" target="_blank" rel="noopener">St Peter’s</a>
+        <a href="https://dblp.org/pid/128/7215" target="_blank" rel="noopener">DBLP</a>
+      </div>
+    </div>
+    <aside class="hero-card">
+      <div class="monogram">JD</div>
+      <p><strong>Research focus</strong></p>
+      <p>Model theory of adeles, valued fields, definability, p-adic integration, zeta functions and arithmetic.</p>
+      <p><a href="#research">See research programme →</a></p>
+    </aside>
+  </div>
+</section>
+
+<section class="section" id="research">
+  <div class="wrap">
+    <div class="research-intro-grid">
+      <div>
+        <p class="section-kicker">Research</p>
+        <h2>Model theory, adeles and arithmetic</h2>
+      </div>
+      <div class="research-lead">
+        <p>My research lies in mathematical logic and model theory, especially where logical methods interact with number theory, algebraic geometry, group theory and analysis. A recurring theme is to understand arithmetic structures uniformly across local fields and across the adele ring, and to use definability, Boolean methods, valued-field model theory and integration to study arithmetic questions.</p>
+      </div>
+    </div>
+
+    <div class="research-programmes">
+      <article class="research-programme">
+        <div class="programme-number">01</div>
+        <div>
+          <p class="programme-label">Adeles & restricted products</p>
+          <h3>Model theory of adeles</h3>
+          <p>A central part of my work develops a model theory for adele rings and related restricted products, including Feferman–Vaught style analysis, Boolean-algebraic structure, elementary equivalence, decidability and axiomatization questions.</p>
+          <div class="related-work"><span>Related:</span><a href="#pub-adeles-i">Model theory of adeles I</a><a href="#pub-restricted-products">Restricted products</a></div>
+        </div>
+      </article>
+
+      <article class="research-programme">
+        <div class="programme-number">02</div>
+        <div>
+          <p class="programme-label">Definability, integration & counting</p>
+          <h3>p-adic and motivic integration, Euler products and zeta functions</h3>
+          <p>I study definable p-adic integrals and their Euler products, with applications to zeta functions arising from groups and arithmetic, combining model-theoretic uniformity, cell decomposition and integration.</p>
+        </div>
+      </article>
+
+      <article class="research-programme">
+        <div class="programme-number">03</div>
+        <div>
+          <p class="programme-label">Products, Booleanizations & sheaves</p>
+          <h3>Imaginaries and model theory of products</h3>
+          <p>With Ehud Hrushovski, I study imaginaries in products and in the adele rings, within a broader interest in Booleanizations, products and sheaves of structures.</p>
+        </div>
+      </article>
+
+      <article class="research-programme">
+        <div class="programme-number">04</div>
+        <div>
+          <p class="programme-label">Local arithmetic structures</p>
+          <h3>Valued fields, algebraic groups and uniform definability</h3>
+          <p>Another strand concerns Henselian valued fields, uniform definitions of valuation rings, model-completeness, and definable subgroups of algebraic groups over non-archimedean local fields.</p>
+        </div>
+      </article>
+
+      <article class="research-programme">
+        <div class="programme-number">05</div>
+        <div>
+          <p class="programme-label">Adelic analysis & automorphic ideas</p>
+          <h3>Langlands functoriality, Fourier transforms and Poisson formulas</h3>
+          <p>I am interested in the interface between adelic analysis, representation theory and the Langlands programme, including non-abelian Fourier transform and Poisson summation.</p>
+        </div>
+      </article>
+
+      <article class="research-programme">
+        <div class="programme-number">06</div>
+        <div>
+          <p class="programme-label">Groups, rings & stability</p>
+          <h3>Model theory of groups and rings</h3>
+          <p>My earlier and continuing work includes nilpotency and solubility under chain conditions, ordered abelian groups, decidability problems for families of finite rings, and related questions in geometric stability theory.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="research-index">
+      <span>Further interests:</span>
+      <span>Algebraic groups and Abelian varieties over local/global fields</span>
+      <span>Model theory of sheaves</span>
+      <span>Hodge theory via o-minimality and adelic analogues</span>
+      <span>Rational points and height-counting problems</span>
+      <span>Measures and analysis on adelic spaces</span>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="publications">
+  <div class="wrap">
+    <div class="section-heading">
+      <div><p class="section-kicker">Publications</p><h2>Papers and preprints</h2></div>
+      <p class="section-note">Links below include arXiv, DOI or journal pages where available.</p>
+    </div>
+
+    <h3>Forthcoming</h3>
+    <ol class="pub-list" reversed start="16">
+      <li><article><h4>Imaginaries, products, and the adele rings</h4><p class="authors">J. Derakhshan, E. Hrushovski</p><p>Volume for Katrin Tent, EMS, to appear.</p><p class="links"><a href="https://arxiv.org/abs/2309.11678">arXiv</a></p></article></li>
+      <li><article><h4>Model theory of Abelian groups that are finite-by-Presburger, and applications to p-adic fields</h4><p class="authors">J. Derakhshan, A. Macintyre</p><p><em>Contemporary Model Theory</em>, College Publications, to appear.</p><p class="links"><a href="https://arxiv.org/abs/1603.08601">arXiv</a></p></article></li>
+      <li><article><h4>Model theory of adeles and number theory</h4><p class="authors">J. Derakhshan</p><p><em>Contemporary Model Theory</em>, College Publications, to appear.</p><p class="links"><a href="https://arxiv.org/abs/2007.09237">arXiv</a></p></article></li>
+      <li><article><h4>p-adic Model theory, p-adic integrals, Euler products, and zeta functions of groups</h4><p class="authors">J. Derakhshan</p><p><em>Contemporary Model Theory</em>, College Publications, to appear.</p><p class="links"><a href="https://arxiv.org/abs/2007.09242">arXiv</a></p></article></li>
+    </ol>
+
+    <h3>Published</h3>
+    <ol class="pub-list" reversed start="12">
+      <li id="pub-restricted-products"><article><h4>Axioms for commutative unital rings elementarily equivalent to restricted products of connected rings</h4><p class="authors">J. Derakhshan, A. Macintyre</p><p><em>Notre Dame Journal of Formal Logic</em> 67 (1), 1–14 (2026).</p><p class="links"><a href="https://doi.org/10.1215/00294527-2025-0021">DOI</a> · <a href="https://arxiv.org/abs/2007.09244">arXiv</a></p></article></li>
+      <li><article><h4>Model completeness for finitely ramified Henselian fields valued in a Z-group and for pseudo-algebraically closed fields</h4><p class="authors">J. Derakhshan, A. Macintyre</p><p><em>Confluentes Mathematici</em> 15 (2023), 137–147.</p><p class="links"><a href="https://doi.org/10.5802/cml.96">DOI</a> · <a href="https://arxiv.org/abs/1603.08598">arXiv</a></p></article></li>
+      <li><article><h4>Decidability of all the rings Z/mZ: A problem of Ax</h4><p class="authors">J. Derakhshan, A. Macintyre</p><p><em>Forum of Mathematics, Sigma</em> 11 (2023), e64, 1–6.</p><p class="links"><a href="https://doi.org/10.1017/fms.2023.62">DOI</a></p></article></li>
+      <li id="pub-adeles-i"><article><h4>Model theory of adeles I</h4><p class="authors">J. Derakhshan, A. Macintyre</p><p><em>Annals of Pure and Applied Logic</em> 173 (3), 2022.</p><p class="links"><a href="https://doi.org/10.1016/j.apal.2021.103074">DOI</a> · <a href="https://arxiv.org/abs/1603.09698">arXiv</a></p></article></li>
+      <li><article><h4>Truncations of ordered abelian groups</h4><p class="authors">P. D’Aquino, J. Derakhshan, A. Macintyre</p><p><em>Algebra Universalis</em> 82 (2021), no. 2.</p><p class="links"><a href="https://doi.org/10.1007/s00012-021-00717-6">DOI</a> · <a href="https://arxiv.org/abs/1910.14517">arXiv</a></p></article></li>
+      <li><article><h4>Enrichments of Boolean algebras by Presburger predicates</h4><p class="authors">J. Derakhshan, A. Macintyre</p><p><em>Fundamenta Mathematicae</em> 239 (1) (2017), 1–17.</p><p class="links"><a href="https://doi.org/10.4064/fm673-1-2017">DOI</a></p></article></li>
+      <li><article><h4>Model theory and zeta functions</h4><p class="authors">J. Derakhshan</p><p>Mathematisches Forschungsinstitut Oberwolfach, Report No. 49/2016.</p><p class="links"><a href="https://doi.org/10.4171/OWR/2016/49">Oberwolfach report</a></p></article></li>
+      <li><article><h4>Some supplements to Feferman–Vaught related to the model theory of adeles</h4><p class="authors">J. Derakhshan, A. Macintyre</p><p><em>Annals of Pure and Applied Logic</em> 165 (11) (2014), 1639–1679.</p><p class="links"><a href="https://doi.org/10.1016/j.apal.2014.06.001">DOI</a> · <a href="https://arxiv.org/abs/1306.1794">arXiv</a></p></article></li>
+      <li><article><h4>Uniformly defining valuation rings in Henselian valued fields with finite or pseudo-finite residue field</h4><p class="authors">R. Cluckers, J. Derakhshan, E. Leenknegt, A. Macintyre</p><p><em>Annals of Pure and Applied Logic</em> 164 (2013), 1236–1246.</p><p class="links"><a href="https://doi.org/10.1016/j.apal.2013.06.010">DOI</a> · <a href="https://arxiv.org/abs/1306.1802">arXiv</a></p></article></li>
+      <li><article><h4>Uniform cell decomposition with applications to Chevalley groups</h4><p class="authors">M. Berman, J. Derakhshan, P. Paajanen, U. Onn</p><p><em>Journal of the London Mathematical Society</em> 87 (2) (2013), 586–606.</p><p class="links"><a href="https://doi.org/10.1112/jlms/jds056">DOI</a> · <a href="https://arxiv.org/abs/1106.2885">arXiv</a></p></article></li>
+      <li><article><h4>Skew linear unipotent groups</h4><p class="authors">J. Derakhshan, F. Wagner</p><p><em>Bulletin of the London Mathematical Society</em> 38 (2006), no. 3, 447–449.</p><p class="links"><a href="https://doi.org/10.1112/S0024609305018345">DOI</a></p></article></li>
+      <li><article><h4>Nilpotency in groups with chain conditions</h4><p class="authors">J. Derakhshan, F. Wagner</p><p><em>Quarterly Journal of Mathematics Oxford</em>, Ser. (2), 48 (1997), no. 192, 453–466.</p><p class="links"><a href="https://doi.org/10.1093/qmath/48.4.453">DOI</a></p></article></li>
+    </ol>
+
+    <details class="more-work">
+      <summary>Preprints and work in preparation</summary>
+      <ul>
+        <li><strong>Definable sets, Euler products of p-adic integrals, and zeta functions I: meromorphic continuation.</strong></li>
+        <li><strong>Definable subgroups of algebraic groups over non-archimedean local fields.</strong></li>
+        <li><strong>Model Theory of Adeles II: elementary equivalence and uniform decidability.</strong> With A. Macintyre. <a href="https://arxiv.org/abs/1910.14471">arXiv</a>.</li>
+        <li><strong>Solubility in groups with chain condition on uniformly definable subgroups.</strong> <a href="https://arxiv.org/abs/1911.01589">arXiv</a>.</li>
+        <li><strong>Model theory of adeles III: Adelic measures and integrals.</strong> With A. Macintyre.</li>
+        <li><strong>Definable adelic integrals.</strong> With R. Takloo-Bighash.</li>
+      </ul>
+    </details>
+  </div>
+</section>
+
+<section class="section" id="books">
+  <div class="wrap">
+    <p class="section-kicker">Books</p>
+    <h2>Monographs and edited volumes</h2>
+    <div class="card-grid">
+      <article class="card"><p class="tag">Monograph in preparation</p><h3>Langlands Functoriality, Nonabelian Fourier Transform, and Poisson Formulas</h3><p>With Laurent Lafforgue. World Scientific.</p></article>
+      <article class="card"><p class="tag">Monograph in preparation</p><h3>Model Theory of Adeles and Number Theory</h3><p>World Scientific.</p></article>
+      <article class="card"><p class="tag">Monograph in preparation</p><h3>Zeta Functions, p-adic and Motivic Integrals and Model Theory</h3><p>World Scientific.</p></article>
+      <article class="card"><p class="tag">Edited volume</p><h3>Contemporary Model Theory</h3><p>With M. Pourmahdian and A. Sadegh Daghighi. College Publications.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="teaching">
+  <div class="wrap two-col">
+    <div><p class="section-kicker">Teaching</p><h2>Oxford mathematics</h2></div>
+    <div class="prose">
+      <p>Recent lecture courses include <strong>Model Theory</strong> and <strong>Algebraic Curves</strong> at the Mathematical Institute.</p>
+      <p>Teaching at St Hilda’s and St Peter’s has covered a broad range of pure mathematics, including analysis, linear algebra, groups, topology, rings and modules, number theory, projective geometry, manifolds, metric spaces and complex analysis.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="talks">
+  <div class="wrap">
+    <p class="section-kicker">Selected talks</p>
+    <h2>Recent lectures and seminars</h2>
+    <div class="timeline">
+      <article><time>2026</time><div><h3>Model Theory of adeles</h3><p>ICMS Edinburgh — Algebra and Arithmetic from Model Theory.</p></div></article>
+      <article><time>2025</time><div><h3>Imaginaries in products and the ring of adeles</h3><p>Lancashire Yorkshire Model Theory Seminar, University of Manchester.</p></div></article>
+      <article><time>2024</time><div><h3>Imaginaries in products and the ring of adeles</h3><p>CIRM, Luminy.</p></div></article>
+      <article><time>2024</time><div><h3>Model theory of Booleanizations, products, and sheaves of structures</h3><p>Logic Advanced Class, Mathematical Institute, Oxford.</p></div></article>
+      <article><time>2023</time><div><h3>Decidability of the class of all rings Z/mZ: A problem of Ax</h3><p>Logic Seminar, Mathematical Institute, University of Oxford.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap contact-box">
+    <div><p class="section-kicker">Contact</p><h2>Jamshid Derakhshan</h2></div>
+    <div>
+      <p><a href="mailto:derakhsh@maths.ox.ac.uk">derakhsh@maths.ox.ac.uk</a></p>
+      <p>St Hilda’s College · St Peter’s College · University of Oxford</p>
+      <p><a href="JDerakhshanCV(1).pdf">Curriculum vitae (PDF)</a></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap footer-wrap">
+    <span>© <span id="year"></span> Jamshid Derakhshan</span>
+    <span>Academic homepage</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
