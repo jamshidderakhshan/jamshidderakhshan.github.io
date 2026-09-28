@@ -51,10 +51,10 @@
     }
     .hero-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,.7fr);gap:46px;align-items:start}
     .eyebrow,.section-kicker,.programme-label,.tag{
-      text-transform:uppercase;letter-spacing:.12em;font-size:.77rem;font-weight:800;color:var(--blue)
+      text-transform:uppercase;letter-spacing:.12em;font-size:.92rem;font-weight:800;color:var(--blue)
     }
-    h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.7rem,7vw,5.1rem);line-height:.98;margin:.18em 0 .2em}
-    h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2rem,4vw,3.1rem);line-height:1.12;margin:.15em 0 .65em}
+    h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.7rem,3.2vw,2.5rem);line-height:1.15;margin:.18em 0 .2em}
+    h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.7rem,3.2vw,2.5rem);line-height:1.15;margin:.15em 0 .65em}
     h3{font-family:Georgia,"Times New Roman",serif;font-size:1.45rem;line-height:1.25}
     h4{font-size:1.05rem;margin:.1em 0 .25em}
     .role{font-size:1.28rem;font-weight:700;margin:.3em 0}
@@ -74,6 +74,11 @@
     .monogram{
       width:92px;height:92px;border-radius:50%;background:var(--accent);color:var(--blue);
       display:grid;place-items:center;font-family:Georgia,"Times New Roman",serif;font-size:2.2rem;font-weight:700;margin-bottom:22px
+    }
+    .profile-photo{
+      width:158px;height:158px;border-radius:50%;object-fit:cover;object-position:50% 34%;
+      display:block;margin:0 auto 22px;border:4px solid #fff;
+      box-shadow:0 4px 18px rgba(20,45,90,.16)
     }
     .section{padding:72px 0}
     .alt{background:var(--soft)}
@@ -129,6 +134,7 @@
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
       <a href="#books">Books</a>
+      <a href="#editorial">Editorial</a>
       <a href="#teaching">Teaching</a>
       <a href="#talks">Talks</a>
       <a href="JDerakhshanCV(1).pdf">CV</a>
@@ -144,7 +150,7 @@
       <h1>Jamshid Derakhshan</h1>
       <p class="role">Lecturer in Pure Mathematics, University of Oxford</p>
       <p class="affiliations">St Hilda’s College · St Peter’s College</p>
-      <p class="intro">My research is in mathematical logic and model theory, with connections to number theory, algebraic geometry, group theory and analysis. Current work focuses on adeles and restricted products, valued fields, p-adic and motivic integration, zeta and L-functions, imaginaries, and interactions with the Langlands programme.</p>
+      <p class="intro">My research is in mathematical logic and model theory, with connections to number theory, algebraic geometry, group theory and analysis. Current work focuses on adeles and restricted products, valued fields, <em>p</em>-adic and motivic integration, zeta and L-functions, imaginaries, and interactions with the Langlands programme.</p>
       <div class="hero-actions">
         <a class="button primary" href="#publications">View publications</a>
         <a class="button" href="JDerakhshanCV(1).pdf">Download CV</a>
@@ -158,9 +164,9 @@
       </div>
     </div>
     <aside class="hero-card">
-      <div class="monogram">JD</div>
-      <p><strong>Research focus</strong></p>
-      <p>Model theory of adeles, valued fields, definability, p-adic integration, zeta functions and arithmetic.</p>
+      <img src="jamshid.jpeg" alt="Jamshid Derakhshan" class="profile-photo">
+      <p><strong>Research interest</strong></p>
+      <p>Model theory of adeles, valued fields, definability, <em>p</em>-adic integration, zeta functions and arithmetic.</p>
       <p><a href="#research">See research programme →</a></p>
     </aside>
   </div>
@@ -193,8 +199,8 @@
         <div class="programme-number">02</div>
         <div>
           <p class="programme-label">Definability, integration & counting</p>
-          <h3>p-adic and motivic integration, Euler products and zeta functions</h3>
-          <p>I study definable p-adic integrals and their Euler products, with applications to zeta functions arising from groups and arithmetic, combining model-theoretic uniformity, cell decomposition and integration.</p>
+          <h3><em>p</em>-adic and motivic integration, Euler products and zeta functions</h3>
+          <p>I study definable <em>p</em>-adic integrals and their Euler products, with applications to zeta functions arising from groups and arithmetic, combining model-theoretic uniformity, cell decomposition and integration.</p>
         </div>
       </article>
 
@@ -256,9 +262,9 @@
     <h3>Forthcoming</h3>
     <ol class="pub-list" reversed start="16">
       <li><article><h4>Imaginaries, products, and the adele rings</h4><p class="authors">J. Derakhshan, E. Hrushovski</p><p>Volume for Katrin Tent, EMS, to appear.</p><p class="links"><a href="https://arxiv.org/abs/2309.11678">arXiv</a></p></article></li>
-      <li><article><h4>Model theory of Abelian groups that are finite-by-Presburger, and applications to p-adic fields</h4><p class="authors">J. Derakhshan, A. Macintyre</p><p><em>Contemporary Model Theory</em>, College Publications, to appear.</p><p class="links"><a href="https://arxiv.org/abs/1603.08601">arXiv</a></p></article></li>
+      <li><article><h4>Model theory of Abelian groups that are finite-by-Presburger, and applications to <em>p</em>-adic fields</h4><p class="authors">J. Derakhshan, A. Macintyre</p><p><em>Contemporary Model Theory</em>, College Publications, to appear.</p><p class="links"><a href="https://arxiv.org/abs/1603.08601">arXiv</a></p></article></li>
       <li><article><h4>Model theory of adeles and number theory</h4><p class="authors">J. Derakhshan</p><p><em>Contemporary Model Theory</em>, College Publications, to appear.</p><p class="links"><a href="https://arxiv.org/abs/2007.09237">arXiv</a></p></article></li>
-      <li><article><h4>p-adic Model theory, p-adic integrals, Euler products, and zeta functions of groups</h4><p class="authors">J. Derakhshan</p><p><em>Contemporary Model Theory</em>, College Publications, to appear.</p><p class="links"><a href="https://arxiv.org/abs/2007.09242">arXiv</a></p></article></li>
+      <li><article><h4><em>p</em>-adic Model theory, <em>p</em>-adic integrals, Euler products, and zeta functions of groups</h4><p class="authors">J. Derakhshan</p><p><em>Contemporary Model Theory</em>, College Publications, to appear.</p><p class="links"><a href="https://arxiv.org/abs/2007.09242">arXiv</a></p></article></li>
     </ol>
 
     <h3>Published</h3>
@@ -280,7 +286,7 @@
     <details class="more-work">
       <summary>Preprints and work in preparation</summary>
       <ul>
-        <li><strong>Definable sets, Euler products of p-adic integrals, and zeta functions I: meromorphic continuation.</strong></li>
+        <li><strong>Definable sets, Euler products of <em>p</em>-adic integrals, and zeta functions I: meromorphic continuation.</strong></li>
         <li><strong>Definable subgroups of algebraic groups over non-archimedean local fields.</strong></li>
         <li><strong>Model Theory of Adeles II: elementary equivalence and uniform decidability.</strong> With A. Macintyre. <a href="https://arxiv.org/abs/1910.14471">arXiv</a>.</li>
         <li><strong>Solubility in groups with chain condition on uniformly definable subgroups.</strong> <a href="https://arxiv.org/abs/1911.01589">arXiv</a>.</li>
@@ -298,15 +304,48 @@
     <div class="card-grid">
       <article class="card"><p class="tag">Monograph in preparation</p><h3>Langlands Functoriality, Nonabelian Fourier Transform, and Poisson Formulas</h3><p>With Laurent Lafforgue. World Scientific.</p></article>
       <article class="card"><p class="tag">Monograph in preparation</p><h3>Model Theory of Adeles and Number Theory</h3><p>World Scientific.</p></article>
-      <article class="card"><p class="tag">Monograph in preparation</p><h3>Zeta Functions, p-adic and Motivic Integrals and Model Theory</h3><p>World Scientific.</p></article>
+      <article class="card"><p class="tag">Monograph in preparation</p><h3>Zeta Functions, <em>p</em>-adic and Motivic Integrals and Model Theory</h3><p>World Scientific.</p></article>
+      <article class="card">
+        <p class="tag">Edited conference proceedings — in preparation</p>
+        <h3>A85: Algebra and Arithmetic from Model Theory</h3>
+        <p><em>Proceedings of a Conference in Honour of Angus Macintyre’s 85th Birthday</em>.</p>
+        <p>Edited by Paola D’Aquino, Jamshid Derakhshan, Thomas Scanlon, Ivan Tomašić, and Frank Wagner. World Scientific.</p>
+      </article>
+      <article class="card">
+        <p class="tag">Monograph in preparation</p>
+        <h3>From Nil-rings to Pro <em>p</em>-Groups: Structures of Groups and Algebras Satisfying Identities</h3>
+        <p>Jamshid Derakhshan and Christian d’Elbée. World Scientific.</p>
+      </article>
       <article class="card"><p class="tag">Edited volume</p><h3>Contemporary Model Theory</h3><p>With M. Pourmahdian and A. Sadegh Daghighi. College Publications.</p></article>
+    </div>
+  </div>
+</section>
+
+
+<section class="section alt" id="editorial">
+  <div class="wrap">
+    <p class="section-kicker">Editorial responsibilities</p>
+    <h2>Editorial responsibilities</h2>
+    <div class="card-grid">
+      <article class="card">
+        <p class="tag">Book series editor</p>
+        <h3>World Scientific Studies in Pure Mathematics</h3>
+        <p>Editor, with Jacob Tsimerman and Yakov Kremnitzer.</p>
+        <p><a href="https://www.worldscientific.com/" target="_blank" rel="noopener">World Scientific Publishing Company</a></p>
+      </article>
+      <article class="card">
+        <p class="tag">Series editor</p>
+        <h3>Landscapes</h3>
+        <p>Editor of the series, College Publications, London.</p>
+        <p><a href="https://www.collegepublications.co.uk/" target="_blank" rel="noopener">College Publications</a></p>
+      </article>
     </div>
   </div>
 </section>
 
 <section class="section alt" id="teaching">
   <div class="wrap two-col">
-    <div><p class="section-kicker">Teaching</p><h2>Oxford mathematics</h2></div>
+    <div><p class="section-kicker">Teaching</p><h2>At the Mathematical Institute, University of Oxford</h2></div>
     <div class="prose">
       <p>Recent lecture courses include <strong>Model Theory</strong> and <strong>Algebraic Curves</strong> at the Mathematical Institute.</p>
       <p>Teaching at St Hilda’s and St Peter’s has covered a broad range of pure mathematics, including analysis, linear algebra, groups, topology, rings and modules, number theory, projective geometry, manifolds, metric spaces and complex analysis.</p>
@@ -319,9 +358,9 @@
     <p class="section-kicker">Selected talks</p>
     <h2>Recent lectures and seminars</h2>
     <div class="timeline">
-      <article><time>2026</time><div><h3>Model Theory of adeles</h3><p>ICMS Edinburgh — Algebra and Arithmetic from Model Theory.</p></div></article>
+      <article><time>2026</time><div><h3>Model theory of the ring of adeles</h3><p>ICMS, Edinburgh — A85: Algebra and Arithmetic from Model Theory.</p><p class="links"><a href="https://icms.ac.uk/activities/workshop/a85/" target="_blank" rel="noopener">Conference</a> · <a href="https://www.youtube.com/playlist?list=PLUbgZHsSoMEXrdU4iZjfT9GtTrsXfhCXH" target="_blank" rel="noopener">Video (YouTube recordings)</a></p></div></article>
       <article><time>2025</time><div><h3>Imaginaries in products and the ring of adeles</h3><p>Lancashire Yorkshire Model Theory Seminar, University of Manchester.</p></div></article>
-      <article><time>2024</time><div><h3>Imaginaries in products and the ring of adeles</h3><p>CIRM, Luminy.</p></div></article>
+      <article><time>2024</time><div><h3>Imaginaries in products and the ring of adeles</h3><p>CIRM, Luminy — Model Theory and Applications to Groups and Combinatorics.</p><p class="links"><a href="https://conferences.cirm-math.fr/3112.html" target="_blank" rel="noopener">Conference</a> · <a href="https://www.cirm-math.fr/Schedule/screen_display.php?id_renc=3112" target="_blank" rel="noopener">Programme</a></p></div></article>
       <article><time>2024</time><div><h3>Model theory of Booleanizations, products, and sheaves of structures</h3><p>Logic Advanced Class, Mathematical Institute, Oxford.</p></div></article>
       <article><time>2023</time><div><h3>Decidability of the class of all rings Z/mZ: A problem of Ax</h3><p>Logic Seminar, Mathematical Institute, University of Oxford.</p></div></article>
     </div>
